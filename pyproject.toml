@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "batRAG"
+version = "0.0.1"
+description = "Fast semantic code search for Python repositories using embedding-based indexing."
+authors = ["Grechko Sergey <grechko.sergey.olegovich@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.13"
+sentence-transformers = "^5.2.3"
+sqlite-vec = "^0.1.6"
+rich = "^14.3.3"
+torch = {version = "^2.6.0", source = "pytorch"}
+torchvision = {version = "^0.21.0", source = "pytorch"}
+
+[[tool.poetry.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[build-system]
+requires = ["poetry-core>=2.0.0"]
+build-backend = "poetry.core.masonry.api"
